@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  turismo:
+    container_name: turismo
+    build:
+     context: ./turismo
+     dockerfile : DockerFile
+    command: python manage.py runserve 0.0.0.0:8000
+    volumes:
+      - ./Turismo/:/usr/src/turismo
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env_dev
+
+
+
+  db:
+  image: postgres
+  container_name: db
+  ports:
+   .5432:5432
+  #restart: always
+  environment: 
+    POSTGRES_PASSWORD: 12345
+    POSTGRES_USER: turismo
+    POSTGRES_DB: turismo
+
