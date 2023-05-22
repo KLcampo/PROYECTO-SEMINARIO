@@ -1,7 +1,7 @@
 Django
-djangoresfrework
-djangoresfrework-simplejwt
-djangomoden-utils
-djangojsonfield
-psycop2-binary
+djangorestframework
+djangorestframework-simplejwt
+django-model-utils
+django-jsonfield
+psycopg2-binary
 gunicorn

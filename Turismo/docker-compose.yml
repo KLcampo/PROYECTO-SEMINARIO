@@ -6,7 +6,7 @@ services:
     build:
      context: ./turismo
      dockerfile : DockerFile
-    command: python manage.py runserve 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./Turismo/:/usr/src/turismo
     ports:
@@ -20,7 +20,7 @@ services:
   image: postgres
   container_name: db
   ports:
-   .5432:5432
+   - 5432:5432
   #restart: always
   environment: 
     POSTGRES_PASSWORD: 12345
