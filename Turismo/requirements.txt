@@ -1,0 +1,7 @@
+Django
+djangoresfrework
+djangoresfrework-simplejwt
+djangomoden-utils
+djangojsonfield
+psycop2-binary
+gunicorn
