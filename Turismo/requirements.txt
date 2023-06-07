@@ -1,7 +1,0 @@
-Django
-djangorestframework
-djangorestframework-simplejwt
-django-model-utils
-django-jsonfield
-psycopg2-binary
-gunicorn

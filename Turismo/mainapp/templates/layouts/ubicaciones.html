@@ -1,0 +1,94 @@
+{% extends '../mainapp/index.html' %}
+
+{% block content %}	
+<link rel="stylesheet" href="../static/main.css">
+<style>
+
+
+.ubicaciones{
+	background: linear-gradient(to right, #3ca55c, #b5ac49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ubicaciones table{
+	
+    color:rgb(247, 244, 244);
+	padding-left: 17% ;
+	font-size: 1.2em;
+
+}
+.ubicaciones h1{
+	display: flex;
+	padding-top: 10%;
+	text-align: center;
+	padding-left: 38% ;
+	color:rgb(244, 238, 238);
+}
+.tabl{
+	border: solid 1px rgb(255, 255, 255, 0.2);
+}
+thead{
+	background: rgba(25, 8, 61, 0.379);
+}
+th{
+	padding: 20px 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+td{
+	padding: 15px;
+	border-bottom: solid 2px rgb(243, 140, 210, 0.4);
+}
+tbody tr{
+	cursor: pointer;
+}
+
+tbody tr:hover {
+	background: #ebbd79;
+}
+
+
+</style>
+
+
+<section class="ubicaciones">
+
+	<h1>Ubicaciones recomendadas para ti</h1>
+	<div class="tabl">
+		<table class="table table-bordered table-striped"><br>
+		  <thead>
+			<tr>
+			  
+			  <tr>
+				<th>Zona</th>
+				<th>Municipio </th>
+				<th>Pueblo/Dirección</th>
+				<th>Coordenadas</th>
+			</tr>
+		  </thead>
+		  <tbody id="data">
+		  </tbody>
+		</table>
+	  </div>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	
+		<script>
+		  let url = 'http://127.0.0.1:8000/v1/ubi';
+			fetch(url)
+				.then( response => response.json() )
+				.then( data => mostrarData(data) )
+				.catch( error => console.log(error) )
+	
+			const mostrarData = (data) => {
+				console.log(data)
+				let body = ""
+				for (var i = 0; i < data.length; i++) {      
+				   body+=`<tr><td>${data[i].zona}</td><td>${data[i].municipio}</td><td>${data[i].pueblo}</td><td>${data[i].accesibilidad}</td></tr>`
+				}
+				document.getElementById('data').innerHTML = body
+				//console.log(body)
+			}
+		</script>
+</section>
+{% endblock %}

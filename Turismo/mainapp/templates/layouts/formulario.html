@@ -1,0 +1,79 @@
+{% extends '../mainapp/index.html' %}
+
+{% block content %}	
+<link rel="stylesheet" href="../static/main.css">
+<style>
+
+#coach{
+		background-image: url("../../static/laguna.jpg");
+		background-repeat: no-repeat;
+		height: 500px;	
+		margin-left: 168px;	
+}
+
+
+	#coaching{
+    padding-top: 15%;
+	padding-left: 15%;
+
+}
+
+#opinion{
+	top: 34%;
+}
+
+table thead {
+	margin-top: 160px;
+	background:#6c90c3;
+    color:rgb(7, 5, 5);
+}
+</style>
+<section id="coach">
+	<p>Compartenos tus opiniones, experiencias</p>
+		<table id="coaching">
+			<form action="" method="POST">
+				{% csrf_token %%}
+
+				{{form.as_table}}
+
+				<tr>
+					<td><input type="submit" value="Guardar"></td>
+				</tr>
+			</form>
+		</table>
+
+</section>
+
+<section class="opinion">
+	<div>
+		<table class="table table-bordered table-striped">
+		  <thead>
+			<tr>
+			  <th>Tus opiniones son valiosas</th>
+			</tr>
+		  </thead>
+		  <tbody id="data">
+		  </tbody>
+		</table>
+	  </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	
+		<script>
+		  let url = 'http://127.0.0.1:8000/v1/form';
+			fetch(url)
+				.then( response => response.json() )
+				.then( data => mostrarData(data) )
+				.catch( error => console.log(error) )
+	
+			const mostrarData = (data) => {
+				console.log(data)
+				let body = ""
+				for (var i = 0; i < data.length; i++) {      
+				   body+=`<tr><td>${data[i].descripcion}</td></tr>`
+				}
+				document.getElementById('data').innerHTML = body
+				//console.log(body)
+			}
+		</script>
+</section>
+{% endblock %}

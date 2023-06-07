@@ -1,50 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>{% block title %} {{title}} {% endblock title %} Dashboard</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        {% load static %}
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                        
-                {% block content %}
-                    {% comment %} %}codigo de los templates{% endcomment %}
-           
-                {% endblock  %}
+{% extends '../mainapp/index.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="../static/main.css">
     
-    
-            </div>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
-</html>
+
+    <div class="slider">
+        <ul>
+            <li>
+                <img src="../static/inicio/cauca2.jpg">
+                </li>
+            <li>
+                <img src="../static/inicio/centropopayan.jpg">
+            </li>
+            <li>
+                <img src="../static/inicio/cascada2.jpg">
+            </li>
+            <li>
+                <img src="../static/inicio/puraces.jpg">
+            </li>
+        </ul>
+    </div>
+
+    <section id="hero">
+        <h1>Cauca <br> Territorio de riquezas naturales, tradición e historias</h1> 
+    </section>
+
+<section id="somos-proya">
+    <div class="container">
+        <div class="img-container"></div>
+        <div class="texto">
+            <p>Riquezas naturales únicas: sierras, páramos a más de 4.000 metros, 
+                termales, playas y mar ideal para el buceo, caudalosos ríos y una diversidad cultural que 
+                se refleja en la gastronomía y demás</p>
+                
+    <p>El Cauca, una maravilla natural del país que la paz permite descubrir</p>   
+        </div>
+    </div>
+</section>
+
+<section id="nuestros-programas">
+        <div class="container">
+            <h2>Destinos Mágicos por Explorar</h2>
+                <div class="programas">
+                    <div class="carta">
+                        <h3>Sotará</h3>
+                        <p>Sus principales actividades económicas son la agricultura y la ganadería. 
+                            El municipio de Sotará cuenta con abundantes fuentes de agua, que tienen 
+                            nacimiento en las numerosas alturas. Se considera de gran importancia la 
+                            fundación de Paispamba, ya que implico un espacio territorial, económico y 
+                            étnico a diferencia del Resguardo de Rioblanco, en donde la tierra es comunal y
+                             la población es de origen indígena.</p>
+                    <!-- <button>+ Info</button>-->
+                    </div>
+                        <div class="carta">
+                            <h3>Tierradentro</h3>
+                            <p>Es una región conformada por los minicipios Paéz e Inzá, su identidad cultural se basa
+                                en actividades agropecuarias, artísticas, gastronomicas, se destaca por ser un territorio plurietnico, 
+                                actualmente existe un porcentaje de habitantes de grupos indigenas que conservan su lengua nativa,
+                                creencias y costumbres.
+                                Esta zona posee una gran variedad de la vegetación natural y una serie de sitios emblematicos que 
+                                los antepasados tal como los llaman dejaron para la historia y su preservación.</p>
+                        <!-- <button>+ Info</button>-->
+                        </div>
+                        <div class="carta">
+                            <h3>Totoró</h3>
+                            <p>Comunmente formado por grupos etnicos, la permanente presencia indígena y campesina 
+                                en este municipio como en el resto del Cauca. Su riqueza cultural, 
+                                paisajística, arqueológica y natural hacen de Totoró un lugar cargado de
+                                atractivos turísticos. Las ciénagas, los complejos lagunares, el páramo y la diversidad de
+                                especies nativas de fauna y flora como el oso de anteojos y la guagua son solo una muestra
+                                del potencial turístico que posee la región al abrir sus puertas al mundo. </p>
+                        <!-- <button>+ Info</button>-->
+                        </div>   
+                </div>
+                <div class="program"></div>
+                    <div class="carta">
+                        <h3>Silvia</h3>
+                        <p>Está conformado por resguardos indígenas, es un pueblo con tres cosas que lo convierten en un destino 
+                            muy especial y encantador para visitar. Primero, su riqueza, historia, tradición, costumbres, creencias indígenas, y 
+                            y de las tribus que habitan aquí, tambien se le atribuyen distintos atractivos que han sido conservados por sus 
+                            habitantes para que sea un lugar emblematico en el departamento del Cauca.</p>
+                    </div> 
+                      
+                </div>
+                
+            </div>         
+        </div>
+</section>
+
+<footer id="footer" class="footer">
+    <div class="container">
+                <i class="copyright"></i>
+                    <div>
+                        <p>
+                        Politica de provacidad
+                        </p>
+                    </div>
+    </div>
+        <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>turismo</span></strong>. All Rights Reserved
+                </div>
+        </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  {% endblock %}
+
+

@@ -1,6 +1,11 @@
 from django.contrib import admin
-from .models import Ubicaciones, Restaurantes
-# Register your models here.
+from .models import Ubicaciones, Restaurantes, Formularioos
+
+class Formularioos_Admin(admin.ModelAdmin):
+    readonly_fields = ('creado', 'editado')
+    search_fields = ('nombre', 'correo', 'descripcion')
+    list_display = ('nombre', 'correo', 'descripcion')
+    ordering = ('-creado',)
 
 class Ubicaciones_Admin(admin.ModelAdmin):
     readonly_fields = ('creado', 'editado')
@@ -14,5 +19,9 @@ class Restaurantes_Admin(admin.ModelAdmin):
     list_display = ('nombre',)
     ordering = ('-creado',)
 
+
 admin.site.register(Ubicaciones, Ubicaciones_Admin)
 admin.site.register(Restaurantes, Restaurantes_Admin)
+admin.site.register(Formularioos, Formularioos_Admin)
+
+

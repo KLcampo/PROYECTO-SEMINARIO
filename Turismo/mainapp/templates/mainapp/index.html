@@ -1,6 +1,30 @@
-{% extends 'layouts/layouts.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title> {% block titulo %}  {% endblock %}</title>
+    <link rel="stylesheet" href="../static/main.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+           <a href="{% url 'index' %}"><img src="../static/caucaLogo2.png" alt="Logo">
+            <nav>
+                <a href="{%  url 'galeria'%}">GALERIA</a>
+                <a href="{% url 'actividades' %}">QUE HACER</a>
+                <a href="{%  url 'formulario'%}">OPINIONES</a>
+                <a href="{%  url 'ubicaciones'%}">UBICACIONES</a>
+            </nav>
+        </div>
+    </header>
 
-{% block content%}
-<h1>proyecto</h1>
+    <div class="container">
+        {% block content %} 
 
-{%endblock%}
+        {% endblock %}
+    </div>
+
+
+</body>
+</html>
+

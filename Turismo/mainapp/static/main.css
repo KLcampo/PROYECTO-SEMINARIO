@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero h1{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 4.4em;
+    color: aliceblue;
+    text-shadow: 4px 4px rgb(23, 28, 15);
+}
+
+#hero p{ color:rgb(247, 246, 248);
+    text-align: center;
+    position: absolute;
+    top: 83%;
+    left: 3%;
+    font-size: 3em;
+
+}
+
+#somos-proya .container{
+   text-align: center;
+   margin-top: 60px;
+}
+.texto p{
+    font-size: 2em;
+    position: static;
+    top: 10px;
+    left: 0px;
+    text-align: center;
+}
+
+.slider{
+  width: 100%;
+  height: 748px;
+  overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 14s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(11, 10, 10);    
+    
+}
+
+header .logo{
+    margin: 0;
+    height: 5px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(236, 231, 231);
+}
+
+
+header a:hover{
+    color: blueviolet;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+#nuestros-programas{
+    background: linear-gradient(to right, #1f1c2c, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(224, 218, 218);
+    text-align: center;
+}
+
+#nuestros-programas .container{
+    padding: 18px 80px;
+    margin-top: 100px;
+}
+
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p{
+
+    text-align: center;
+    display: flex;
+    padding-top: 75px;
+}
+
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 2px 0px;
+    margin: 55px;
+    border-radius: 15px;
+}
+
+
+#nuestros-programas .programas{
+    display: flex;
+    justify-content: center;
+}
+
+#nuestros-programas .program{
+    display: flex;
+    justify-content: center;
+}
+#nuestros-programas .programs{
+    display: flex;
+    justify-content: center;
+}
+
+#nuestros-programas h2{
+    font-size: 4em;
+}
+
+#nuestros-programas h3{
+    margin-top: 1px;
+    font-size: 2.3em;
+}
+
+#nuestros-programas .carta{
+    padding: 55px;
+    background-size: 100% 153px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("inicio/sotara.png");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("inicio/tierradentro1.png");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("inicio/totorocapilla.jpg");
+}
+
+
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("inicio/silvia2.png");
+}
+
+.footer {
+    font-size: 14px;
+    background-color: #1f1f24;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 18px;
+  }
+  
+  .footer .buttons{
+    margin-right: 15px;
+    font-size: 24em;
+    line-height: 0;
+  }
+  
+.footer h4 {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    color: #fff;
+}
+  
+.footer .copyright {
+    text-align: center;
+    padding-top: 56px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.containers{
+    width: 100%;
+    max-width: 1500px;
+    padding-top: 145px;
+
+}
+
+.lbl-menu{
+    background: #234;
+}
+
+.lbl-menu label{
+    display: inline-block;
+    padding: 13px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.lbl-menu label:hover{
+    background: #28435d;
+}
+
+.contents{
+    position: relative;
+
+}
+
+.contents div{
+    position: absolute;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    padding: 10px;
+    background: #fff;
+    padding-bottom: 40px;
+}
+
+#radio1,#radio2,#radio3,#radio4,#radio5,#radio6{
+    display: none;
+}
+
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4,
+#radio5:checked ~ .tab5,
+#radio6:checked ~ .tab6
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.contents div:after{
+    position: absolute;
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    bottom: 100%;
+    left: 28px;
+}
+
+.contents .tab2:after{
+    left: 140px;
+}
+.contents .tab3:after{
+    left: 245px;
+}
+.contents .tab4:after{
+    left: 376px;
+}
+
+.contents .tab5:after{
+    left: 475px;
+}
+
+.contents .tab6:after{
+    left: 567px;
+}
+
+.sliders{
+    padding-top: 2px;
+    width: 440px;
+    height: auto;
+    margin: 0 34% 0;
+    overflow: hidden;
+
+}
+.sliders ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 14s infinite alternate linear;
+}
+.sliders li{
+    width: 300%;
+    list-style: none;
+}
+.sliders img{
+    width: 100%;
+    border-radius: 10px;
+}
+@keyframes cambio{
+      0%{margin-left: 0;}
+      20%{margin-left: 0;}
+      
+      25%{margin-left: -100%;}
+      45%{margin-left: -100%;}
+      
+      50%{margin-left: -200%;}
+      70%{margin-left: -200%;}
+      
+      75%{margin-left: -300%;}
+      100%{margin-left: -300%;}
+}
+
+
+.galeria{
+    font-family: 'open sans';
+    top: 35px;
+    position: static;
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+.linea{
+    border-top: 5px solid #4d5154;
+    margin-bottom: 40px;
+}
+
+.contenedor-imagenes{
+    display:flex;
+    position: static;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+    padding-top: 7%;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(0, 118, 192, 0.781) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 200;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+#ubicaciones{
+    padding-top: 12%;
+    color:rgb(7, 5, 5)
+}
+
